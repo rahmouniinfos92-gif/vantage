@@ -727,7 +727,7 @@ h1 .line{display:block;white-space:nowrap}
     }, 3200);
   }
 
-  // Contact form: sends directly to r.rhalimi@vantageadvisory.ma
+  // Contact form: sends directly to contact@vantageadvisory.ma
   var form = document.getElementById('contactForm');
   var formError = document.getElementById('formError');
   form.addEventListener('submit', function (e) {
@@ -743,7 +743,7 @@ h1 .line{display:block;white-space:nowrap}
     var email = document.getElementById('f-email').value;
     var msg = document.getElementById('f-msg').value;
 
-    fetch('https://formsubmit.co/ajax/r.rhalimi@vantageadvisory.ma', {
+    fetch('https://formsubmit.co/ajax/contact@vantageadvisory.ma', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
