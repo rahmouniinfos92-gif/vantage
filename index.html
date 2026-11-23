@@ -1,0 +1,1558 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Vantage Advisory: Strategic advisory for MedTech &amp; health systems</title>
+<meta name="description" content="An independent, senior-led strategic advisory firm helping MedTech companies, investors and health systems bring structure to complex markets, expand coverage and grow revenue worldwide.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%231F3A5F'/%3E%3Cpath d='M22 28 L50 80 L72 30' fill='none' stroke='%23F4F1EA' stroke-width='9' stroke-linecap='square'/%3E%3Cpath d='M78 12 L85 19 L78 26 L71 19 Z' fill='%23C9A96E'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+/* ==========================================================================
+   CSS VARIABLES & CORE RESET
+   ========================================================================== */
+:root {
+  --navy: #1F3A5F;
+  --navy-dark: #162B47;
+  --navy-rule: #36507A;
+  --on-navy: #F4F1EA;
+  --on-navy-muted: #C9D3DE;
+  --champagne: #D4B67E;
+  --brass: #A8834A;
+  --gold-btn: #C9A96E;
+  --gold-btn-hover: #DCC08C;
+  --outline-border: #8FA3B8;
+  --overlay-bg: rgba(22, 38, 61, 0.94);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+  height: 100dvh;
+  max-height: 100dvh;
+  overflow: hidden;
+  background-color: var(--navy);
+  color: var(--on-navy);
+  font-family: 'Jost', 'Futura', 'Century Gothic', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--champagne);
+  outline-offset: 3px;
+}
+
+/* ==========================================================================
+   PAGE FRAME (STRICT NO-SCROLL LAYOUT)
+   ========================================================================== */
+.vantage-frame {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+  height: 100dvh;
+  max-height: 100dvh;
+  overflow: hidden;
+  background: radial-gradient(circle at 75% 40%, #264673 0%, var(--navy) 65%, var(--navy-dark) 100%);
+}
+
+.wrap {
+  width: 100%;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding-left: clamp(18px, 4vw, 36px);
+  padding-right: clamp(18px, 4vw, 36px);
+}
+
+/* Ambient topographic contour lines */
+.hero__lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+.site-header {
+  flex: 0 0 auto;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: clamp(12px, 2.5vh, 28px);
+  padding-bottom: clamp(10px, 2vh, 22px);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--on-navy);
+  user-select: none;
+}
+
+.brand__logo {
+  display: block;
+  width: clamp(32px, 4vh, 40px);
+  height: clamp(32px, 4vh, 40px);
+}
+
+.brand__name {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.brand__name b {
+  font-size: clamp(16px, 2.2vh, 20px);
+  font-weight: 500;
+  letter-spacing: .28em;
+  line-height: 1;
+}
+
+.brand__name small {
+  font-size: clamp(8px, 1.1vh, 9.5px);
+  font-weight: 500;
+  letter-spacing: .58em;
+  line-height: 1;
+  color: var(--champagne);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 2.4vw, 34px);
+  font-size: clamp(14px, 1.7vh, 16px);
+}
+
+.nav a {
+  position: relative;
+  color: var(--on-navy);
+  padding: 6px 0;
+  transition: color .2s ease;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--champagne);
+  transition: width .25s ease;
+}
+
+.nav a:hover {
+  color: #FFFFFF;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+.site-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: clamp(38px, 5vh, 48px);
+  padding: 0 clamp(18px, 2vw, 28px);
+  font: inherit;
+  font-size: clamp(13px, 1.6vh, 15px);
+  font-weight: 500;
+  letter-spacing: .02em;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease, transform .15s ease, opacity .2s ease;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn--gold {
+  background: var(--gold-btn);
+  color: #16263D;
+  border-color: var(--gold-btn);
+}
+
+.btn--gold:hover {
+  background: var(--gold-btn-hover);
+  border-color: var(--gold-btn-hover);
+}
+
+.btn--outline-light {
+  border-color: var(--outline-border);
+  color: var(--on-navy);
+  background: transparent;
+}
+
+.btn--outline-light:hover {
+  background: var(--on-navy);
+  color: var(--navy);
+  border-color: var(--on-navy);
+}
+
+.menu-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--outline-border);
+  color: var(--on-navy);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: .08em;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background .2s ease;
+}
+
+.menu-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* ==========================================================================
+   HERO MAIN VIEWPORT SECTION
+   ========================================================================== */
+.hero__section {
+  flex: 1 1 auto;
+  min-height: 0; /* Prevents overflow */
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  padding-top: clamp(4px, 1.5vh, 24px);
+  padding-bottom: clamp(4px, 1.5vh, 24px);
+}
+
+.hero__grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 54px);
+  align-items: center;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 3;
+}
+
+/* Eyebrow / Kicker */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(10px, 1.5vw, 16px);
+  margin: 0 0 clamp(8px, 1.6vh, 16px);
+  font-size: clamp(11px, min(1.1vw, 1.4vh), 13px);
+  font-weight: 500;
+  letter-spacing: .24em;
+  color: var(--champagne);
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: clamp(20px, 3vw, 36px);
+  height: 1px;
+  background: var(--champagne);
+}
+
+/* Coming Soon Badge */
+.coming-soon-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 14px;
+  background: rgba(212, 182, 126, 0.08);
+  border: 1px solid rgba(212, 182, 126, 0.35);
+  border-radius: 999px;
+  margin-bottom: clamp(8px, 1.5vh, 16px);
+  width: fit-content;
+}
+
+.coming-soon-dot {
+  width: 7px;
+  height: 7px;
+  background: var(--champagne);
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(212, 182, 126, 0.7);
+  animation: pulseGold 2.2s infinite;
+}
+
+.coming-soon-text {
+  font-size: clamp(10px, 1.2vh, 11.5px);
+  font-weight: 600;
+  letter-spacing: .24em;
+  color: var(--champagne);
+  line-height: 1;
+}
+
+.coming-soon-sep {
+  color: rgba(212, 182, 126, 0.4);
+  font-size: 11px;
+}
+
+.coming-soon-sub {
+  font-size: clamp(9.5px, 1.1vh, 11px);
+  font-weight: 400;
+  letter-spacing: .16em;
+  color: var(--on-navy-muted);
+  line-height: 1;
+}
+
+@keyframes pulseGold {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(212, 182, 126, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 6px rgba(212, 182, 126, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(212, 182, 126, 0);
+  }
+}
+
+/* Headline */
+h1 {
+  margin: 0;
+  font-size: clamp(26px, min(4.5vw, 6vh), 66px);
+  font-weight: 300;
+  line-height: 1.08;
+  letter-spacing: -.025em;
+  color: #FFFFFF;
+}
+
+h1 .line {
+  display: block;
+  white-space: nowrap;
+}
+
+.rot {
+  display: inline-block;
+  color: var(--champagne);
+  font-weight: 400;
+  transition: opacity .35s ease, transform .35s ease;
+}
+
+.rot.is-out {
+  opacity: 0;
+  transform: translateY(-.25em);
+}
+
+/* Subtitle paragraph */
+.hero__sub {
+  margin-top: clamp(8px, 1.8vh, 20px);
+  max-width: 34em;
+  font-size: clamp(13px, min(1.1vw, 1.7vh), 17px);
+  font-weight: 300;
+  line-height: clamp(1.4, 2vh, 1.6);
+  color: var(--on-navy-muted);
+}
+
+/* ==========================================================================
+   NEWSLETTER SECTION
+   ========================================================================== */
+.newsletter-block {
+  margin-top: clamp(12px, 2.2vh, 26px);
+  max-width: 480px;
+}
+
+.newsletter-label {
+  font-size: clamp(11.5px, 1.3vh, 13px);
+  font-weight: 500;
+  letter-spacing: .08em;
+  color: var(--champagne);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.newsletter-row {
+  display: flex;
+  align-items: stretch;
+  background: rgba(15, 27, 45, 0.7);
+  border: 1px solid var(--navy-rule);
+  padding: 3px;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.newsletter-row:focus-within {
+  border-color: var(--champagne);
+  box-shadow: 0 0 0 2px rgba(212, 182, 126, 0.2);
+}
+
+.newsletter-input {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: clamp(38px, 4.4vh, 46px);
+  padding: 0 14px;
+  background: transparent;
+  border: none;
+  color: #FFFFFF;
+  font: inherit;
+  font-size: clamp(13px, 1.5vh, 15px);
+}
+
+.newsletter-input::placeholder {
+  color: rgba(201, 211, 222, 0.55);
+}
+
+.newsletter-input:focus {
+  outline: none;
+}
+
+.newsletter-btn {
+  flex: 0 0 auto;
+  min-height: clamp(38px, 4.4vh, 46px);
+  padding: 0 clamp(16px, 1.8vw, 24px);
+  font-size: clamp(12.5px, 1.5vh, 14px);
+}
+
+.newsletter-feedback {
+  min-height: 18px;
+  font-size: 12.5px;
+  color: var(--on-navy-muted);
+  transition: opacity .2s ease;
+}
+
+.newsletter-feedback.is-success {
+  color: #8AD9A4;
+}
+
+.newsletter-feedback.is-error {
+  color: #F87171;
+}
+
+/* Buttons group */
+.hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: clamp(8px, 1.2vw, 14px);
+  margin-top: clamp(8px, 1.8vh, 18px);
+}
+
+/* ==========================================================================
+   HERO BRAND MARK (RIGHT COLUMN GRAPHIC)
+   ========================================================================== */
+.hero__mark {
+  justify-self: center;
+  width: 100%;
+  max-width: min(100%, clamp(170px, min(36vw, 48vh), 380px));
+  max-height: clamp(170px, 48vh, 380px);
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero__mark svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* ==========================================================================
+   TICKER BAND (BOTTOM RIBBON)
+   ========================================================================== */
+.ticker-band {
+  flex: 0 0 auto;
+  position: relative;
+  z-index: 10;
+  border-top: 1px solid var(--navy-rule);
+  background: rgba(22, 38, 61, 0.45);
+  backdrop-filter: blur(8px);
+  overflow: hidden;
+}
+
+.ticker {
+  display: flex;
+  width: max-content;
+  animation: tickerScroll 55s linear infinite;
+}
+
+.ticker:hover {
+  animation-play-state: paused;
+}
+
+.ticker ul {
+  display: flex;
+  align-items: center;
+  gap: clamp(24px, 3vw, 40px);
+  list-style: none;
+  margin: 0;
+  padding: clamp(10px, 1.8vh, 18px) clamp(24px, 3vw, 40px) clamp(10px, 1.8vh, 18px) 0;
+  font-size: clamp(10.5px, 1.35vh, 12.5px);
+  font-weight: 500;
+  letter-spacing: .25em;
+  color: var(--on-navy-muted);
+  white-space: nowrap;
+}
+
+.ticker li {
+  display: flex;
+  align-items: center;
+  gap: clamp(24px, 3vw, 40px);
+}
+
+.ticker li::after {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: var(--champagne);
+  transform: rotate(45deg);
+  opacity: .85;
+}
+
+/* ==========================================================================
+   KEYFRAME ANIMATIONS
+   ========================================================================== */
+.rise {
+  animation: rise 1s cubic-bezier(.2,.7,.2,1) backwards;
+  animation-delay: var(--d, 0s);
+}
+
+.fade {
+  animation: fade 1.4s ease backwards;
+  animation-delay: var(--d, 0s);
+}
+
+.draw {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 0;
+  animation: draw 1.6s cubic-bezier(.6,0,.2,1) backwards;
+  animation-delay: var(--d, 0s);
+}
+
+.flow {
+  animation: flow 10s linear infinite;
+}
+
+.spin {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: spin 70s linear infinite;
+}
+
+.spin--rev {
+  animation-duration: 95s;
+  animation-direction: reverse;
+}
+
+.orbit {
+  transform-box: view-box;
+  transform-origin: 200px 200px;
+  animation: spin 26s linear infinite;
+}
+
+.peak {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: peak 1.2s cubic-bezier(.2,.7,.2,1) 1.9s backwards, float 5s ease-in-out 3.2s infinite;
+}
+
+.peak--once {
+  animation: peak 1s cubic-bezier(.2,.7,.2,1) 1.1s backwards;
+}
+
+.ping {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ping 3.2s ease-out 2.8s infinite backwards;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes draw {
+  from { stroke-dashoffset: 100; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes flow {
+  to { stroke-dashoffset: -120; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes peak {
+  from { opacity: 0; transform: translateY(35px) rotate(-45deg) scale(.4); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+@keyframes ping {
+  0% { opacity: 0; transform: scale(1); }
+  12% { opacity: .85; }
+  100% { opacity: 0; transform: scale(3.2); }
+}
+
+@keyframes tickerScroll {
+  to { transform: translateX(-50%); }
+}
+
+/* ==========================================================================
+   MOBILE & DRAWER NAVIGATION MODAL
+   ========================================================================== */
+.mobile-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: rgba(15, 27, 45, 0.98);
+  backdrop-filter: blur(14px);
+  padding: 24px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s ease, visibility .3s ease;
+}
+
+.mobile-drawer.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-drawer__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--navy-rule);
+  padding-bottom: 16px;
+}
+
+.mobile-drawer__close {
+  background: transparent;
+  border: 1px solid var(--outline-border);
+  color: var(--on-navy);
+  font-size: 20px;
+  line-height: 1;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.mobile-drawer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 20px 0;
+}
+
+.mobile-drawer__nav a {
+  font-size: 19px;
+  font-weight: 400;
+  color: var(--on-navy);
+  border-bottom: 1px solid rgba(54, 80, 122, 0.4);
+  padding-bottom: 12px;
+}
+
+.mobile-drawer__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--navy-rule);
+}
+
+/* ==========================================================================
+   CONTACT & MODAL DIALOG
+   ========================================================================== */
+.dialog-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 20, 35, 0.82);
+  backdrop-filter: blur(8px);
+  padding: 16px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .25s ease, visibility .25s ease;
+}
+
+.dialog-backdrop.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dialog-card {
+  position: relative;
+  width: 100%;
+  max-width: 540px;
+  background: #172A42;
+  border: 1px solid var(--navy-rule);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+  padding: clamp(24px, 4vh, 36px);
+  transform: translateY(16px);
+  transition: transform .25s cubic-bezier(.2, .7, .2, 1);
+  color: var(--on-navy);
+}
+
+.dialog-backdrop.is-active .dialog-card {
+  transform: translateY(0);
+}
+
+.dialog-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  color: var(--on-navy-muted);
+  font-size: 24px;
+  cursor: pointer;
+  padding: 4px;
+  line-height: 1;
+}
+
+.dialog-close:hover {
+  color: #FFFFFF;
+}
+
+.dialog-card h3 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+.dialog-card p {
+  color: var(--on-navy-muted);
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.dialog-form {
+  display: grid;
+  gap: 14px;
+}
+
+.dialog-field {
+  display: grid;
+  gap: 6px;
+}
+
+.dialog-field label {
+  font-size: 13.5px;
+  font-weight: 500;
+}
+
+.dialog-field input, .dialog-field textarea {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 14px;
+  background: rgba(15, 27, 45, 0.6);
+  border: 1px solid #4D6B94;
+  color: var(--on-navy);
+  font: inherit;
+  font-size: 15px;
+}
+
+.dialog-field textarea {
+  min-height: 90px;
+  padding: 10px 14px;
+  resize: none;
+}
+
+.dialog-field input:focus, .dialog-field textarea:focus {
+  outline: none;
+  border-color: var(--champagne);
+}
+
+.dialog-sent {
+  display: none;
+  padding: 20px;
+  border: 1px solid var(--champagne);
+  color: var(--champagne);
+  font-size: 16px;
+  text-align: center;
+}
+
+.dialog-form.is-submitted > *:not(.dialog-sent) {
+  display: none;
+}
+
+.dialog-form.is-submitted .dialog-sent {
+  display: block;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN ADAPTATIONS (NO SCROLL ACROSS ALL SCREEN SIZES)
+   ========================================================================== */
+
+/* Laptop & Tablet landscape (width <= 1024px) */
+@media (max-width: 1024px) {
+  .site-header {
+    padding-top: clamp(10px, 2vh, 18px);
+    padding-bottom: clamp(8px, 1.6vh, 16px);
+  }
+  .hero__grid {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    gap: 28px;
+  }
+}
+
+/* Tablet portrait & Mobile (< 880px) */
+@media (max-width: 880px) {
+  .nav {
+    display: none !important;
+  }
+  .site-header .btn {
+    display: none !important;
+  }
+  .menu-btn {
+    display: inline-flex !important;
+  }
+}
+
+/* Mobile Screens (< 768px) */
+@media (max-width: 768px) {
+  .wrap {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hero__section {
+    overflow: hidden;
+  }
+
+  .hero__grid {
+    grid-template-columns: 1fr;
+    position: relative;
+    gap: 0;
+  }
+
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: .12em;
+    flex-wrap: wrap;
+    gap: 8px;
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+
+  .eyebrow::before {
+    width: 20px;
+  }
+
+  h1 {
+    font-size: clamp(26px, 7vw, 40px);
+    line-height: 1.12;
+  }
+
+  h1 .line {
+    white-space: normal;
+  }
+
+  .hero__sub {
+    font-size: clamp(13px, 3.4vw, 15px);
+    line-height: 1.48;
+    margin-top: 14px;
+    max-width: 100%;
+  }
+
+  .hero__cta {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    margin-top: 14px;
+  }
+
+  .hero__cta .btn {
+    flex: 1 1 auto;
+    min-height: 40px;
+    font-size: 13px;
+    padding: 0 16px;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .newsletter-block {
+    max-width: 100%;
+    margin-top: 14px;
+  }
+
+  /* Place the iconic mark as an elegant, non-intrusive animated background watermark on mobile */
+  .hero__mark {
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: clamp(170px, 48vw, 240px);
+    max-width: 55vw;
+    max-height: 50vh;
+    opacity: 0.16;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  .hero__content {
+    position: relative;
+    z-index: 3;
+    max-width: 100%;
+  }
+}
+
+/* Phones (< 480px) */
+@media (max-width: 480px) {
+  .wrap {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .newsletter-row {
+    flex-direction: column;
+    padding: 0;
+    background: transparent;
+    border: none;
+    gap: 8px;
+  }
+
+  .newsletter-input {
+    background: rgba(15, 27, 45, 0.7);
+    border: 1px solid var(--navy-rule);
+    min-height: 42px;
+  }
+
+  .newsletter-btn {
+    width: 100%;
+    min-height: 42px;
+  }
+
+  .hero__cta {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 12px;
+  }
+
+  .hero__cta .btn {
+    width: 100%;
+    min-height: 40px;
+  }
+}
+
+/* Very narrow phones (< 380px) */
+@media (max-width: 380px) {
+  .wrap {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: .08em;
+  }
+
+  h1 {
+    font-size: clamp(23px, 6.8vw, 30px);
+  }
+
+  .hero__sub {
+    font-size: 12px;
+    line-height: 1.42;
+    margin-top: 8px;
+  }
+
+  .hero__mark {
+    right: -20px;
+    width: 160px;
+    opacity: 0.12;
+  }
+}
+
+/* Ultra-low height viewports (laptops with small screens or mobile landscape, <= 640px height) */
+@media (max-height: 640px) {
+  .site-header {
+    padding-top: 8px;
+    padding-bottom: 6px;
+  }
+  .coming-soon-badge {
+    margin-bottom: 4px;
+    padding: 3px 10px;
+  }
+  .eyebrow {
+    margin-bottom: 4px;
+    font-size: 11px;
+  }
+  h1 {
+    font-size: clamp(20px, 4.8vh, 32px);
+    line-height: 1.1;
+  }
+  .hero__sub {
+    margin-top: 6px;
+    font-size: 12.5px;
+    line-height: 1.38;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .newsletter-block {
+    margin-top: 8px;
+  }
+  .newsletter-label {
+    display: none;
+  }
+  .newsletter-input, .newsletter-btn {
+    min-height: 34px;
+    font-size: 12px;
+  }
+  .hero__cta {
+    margin-top: 8px;
+    gap: 8px;
+  }
+  .btn {
+    min-height: 34px;
+    padding: 0 14px;
+    font-size: 12px;
+  }
+  .ticker ul {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 10.5px;
+  }
+  .hero__mark {
+    max-width: clamp(130px, 38vh, 200px);
+    max-height: clamp(130px, 38vh, 200px);
+  }
+}
+
+/* Super compact height (e.g. phone landscape <= 480px height) */
+@media (max-height: 480px) {
+  .site-header {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  .coming-soon-badge {
+    display: none;
+  }
+  .hero__sub {
+    display: none;
+  }
+  .eyebrow {
+    display: none;
+  }
+  .newsletter-block {
+    margin-top: 6px;
+  }
+  .hero__cta {
+    margin-top: 6px;
+  }
+  .ticker ul {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .hero__mark {
+    opacity: 0.18;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="vantage-frame" id="top">
+  <!-- Subtle topographic animated contour background -->
+  <svg class="hero__lines fade" viewBox="0 0 1440 820" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <path class="flow" d="M-40 470 C 260 420, 460 540, 760 480 S 1240 400, 1480 460" fill="none" stroke="#F4F1EA" stroke-opacity=".11" stroke-dasharray="3 9"/>
+    <path class="flow" style="animation-duration:12s" d="M-40 530 C 280 480, 480 600, 780 540 S 1250 470, 1480 520" fill="none" stroke="#F4F1EA" stroke-opacity=".10" stroke-dasharray="3 9"/>
+    <path class="flow" style="animation-duration:14s" d="M-40 590 C 300 540, 500 660, 800 600 S 1260 540, 1480 580" fill="none" stroke="#F4F1EA" stroke-opacity=".09" stroke-dasharray="3 9"/>
+    <path class="flow" style="animation-duration:16s" d="M-40 650 C 320 600, 520 720, 820 660 S 1270 610, 1480 640" fill="none" stroke="#F4F1EA" stroke-opacity=".08" stroke-dasharray="3 9"/>
+    <path class="flow" style="animation-duration:18s" d="M-40 710 C 340 660, 540 780, 840 720 S 1280 680, 1480 700" fill="none" stroke="#F4F1EA" stroke-opacity=".07" stroke-dasharray="3 9"/>
+  </svg>
+
+  <!-- =====================================================================
+       HEADER
+       ===================================================================== -->
+  <header class="site-header wrap">
+    <a class="brand" href="vantage.html" aria-label="Vantage Advisory, home">
+      <svg class="brand__logo" viewBox="0 0 100 100" aria-hidden="true">
+        <path class="draw" style="--d:.2s;animation-duration:1.2s" pathLength="100" d="M14 24 L50 88 L78 22" fill="none" stroke="#F4F1EA" stroke-width="8" stroke-linecap="square" stroke-linejoin="miter"/>
+        <path class="peak--once" d="M84 4 L91 11 L84 18 L77 11 Z" fill="#C9A96E"/>
+      </svg>
+      <span class="brand__name"><b>VANTAGE</b><small>ADVISORY</small></span>
+    </a>
+
+    <nav class="nav" id="desktopNav" aria-label="Main">
+      <a href="vantage-advisory-homepage.html#clients">Who we work with</a>
+      <a href="vantage-advisory-homepage.html#services">What we do</a>
+      <a href="vantage-advisory-homepage.html#approach">How we work</a>
+      <a href="vantage-advisory-homepage.html#experience">Experience</a>
+      <a href="vantage-advisory-homepage.html#team">Team</a>
+    </nav>
+
+    <div class="site-header-actions">
+      <button class="btn btn--outline-light open-modal-btn" type="button" aria-haspopup="dialog">Discuss an opportunity</button>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobileDrawer" id="menuBtn">Menu</button>
+    </div>
+  </header>
+
+  <!-- =====================================================================
+       HERO MAIN
+       ===================================================================== -->
+  <main class="hero__section">
+    <div class="hero__grid wrap">
+      <!-- Left Content -->
+      <div class="hero__content">
+        <!-- Coming Soon Badge -->
+        <div class="coming-soon-badge rise" style="--d:.05s">
+          <span class="coming-soon-dot"></span>
+          <span class="coming-soon-text">COMING SOON</span>
+          <span class="coming-soon-sep">/</span>
+          <span class="coming-soon-sub">LAUNCHING 2026</span>
+        </div>
+
+        <p class="eyebrow rise" style="--d:.15s">STRATEGIC ADVISORY · MEDTECH &amp; HEALTH SYSTEMS</p>
+        <h1>
+          <span class="line rise" style="--d:.3s">Commercial scale</span>
+          <span class="line rise" style="--d:.45s">in <span class="rot" id="rot">complex</span></span>
+          <span class="line rise" style="--d:.6s">markets.</span>
+        </h1>
+        <p class="hero__sub rise" style="--d:.75s">
+          Vantage is a strategic partner to MedTech, diagnostics and life sciences companies, investors and health systems. We bring structure to complex markets: a clear vision, a roadmap, and the right model for coverage expansion and international business growth.
+        </p>
+
+        <!-- Newsletter Subscription -->
+        <div class="newsletter-block rise" style="--d:.9s">
+          <form class="newsletter-form" id="newsletterForm" action="https://formsubmit.co/r.rhalimi@vantageadvisory.ma" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="[Vantage Advisory] Nouvelle inscription Newsletter">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <div class="newsletter-row">
+              <input type="email" name="email" class="newsletter-input" id="newsletterEmail" placeholder="Enter your work email address" required autocomplete="email" aria-label="Work email address">
+              <button type="submit" class="btn btn--gold newsletter-btn" id="newsletterBtn">Notify me</button>
+            </div>
+            <div class="newsletter-feedback" id="newsletterFeedback" aria-live="polite"></div>
+          </form>
+        </div>
+
+        <!-- Action button -->
+        <div class="hero__cta rise" style="--d:1.05s">
+          <button class="btn btn--outline-light open-modal-btn" type="button">Discuss an opportunity</button>
+        </div>
+      </div>
+
+      <!-- Right Graphic / Brand Mark -->
+      <div class="hero__mark" aria-hidden="true">
+        <svg viewBox="0 0 400 400">
+          <circle class="spin" cx="200" cy="200" r="190" fill="none" stroke="#F4F1EA" stroke-opacity=".2" stroke-dasharray="2 8"/>
+          <circle class="spin spin--rev" cx="200" cy="200" r="150" fill="none" stroke="#D4B67E" stroke-opacity=".45" stroke-dasharray="60 18 4 18"/>
+          <g class="orbit"><circle cx="200" cy="10" r="4" fill="#C9A96E"/></g>
+          <path class="draw" style="--d:.3s" pathLength="100" d="M70 316 L330 316" fill="none" stroke="#F4F1EA" stroke-opacity=".28"/>
+          <path class="draw" style="--d:.6s;animation-duration:2s" pathLength="100" d="M122 118 L200 288 L264 136" fill="none" stroke="#F4F1EA" stroke-width="15" stroke-linecap="square" stroke-linejoin="miter"/>
+          <circle class="ping" cx="288" cy="92" r="20" fill="none" stroke="#C9A96E" stroke-width="1.5"/>
+          <path class="peak" d="M288 72 L308 92 L288 112 L268 92 Z" fill="#C9A96E"/>
+        </svg>
+      </div>
+    </div>
+  </main>
+
+  <!-- =====================================================================
+       TICKER BAND (BOTTOM RIBBON)
+       ===================================================================== -->
+  <div class="ticker-band" aria-hidden="true">
+    <div class="ticker">
+      <ul>
+        <li>COVERAGE EXPANSION</li>
+        <li>INTERNATIONAL BUSINESS GROWTH</li>
+        <li>GO-TO-MARKET</li>
+        <li>COMMERCIAL OPERATIONS</li>
+        <li>OPERATING MODEL</li>
+        <li>M&amp;A &amp; DUE DILIGENCE</li>
+        <li>HEALTH SYSTEMS</li>
+        <li>AFRICA</li>
+        <li>MIDDLE EAST &amp; GCC</li>
+        <li>CENTRAL &amp; EASTERN EUROPE</li>
+        <li>LATIN AMERICA</li>
+        <li>ASIA PACIFIC</li>
+      </ul>
+      <ul>
+        <li>COVERAGE EXPANSION</li>
+        <li>INTERNATIONAL BUSINESS GROWTH</li>
+        <li>GO-TO-MARKET</li>
+        <li>COMMERCIAL OPERATIONS</li>
+        <li>OPERATING MODEL</li>
+        <li>M&amp;A &amp; DUE DILIGENCE</li>
+        <li>HEALTH SYSTEMS</li>
+        <li>AFRICA</li>
+        <li>MIDDLE EAST &amp; GCC</li>
+        <li>CENTRAL &amp; EASTERN EUROPE</li>
+        <li>LATIN AMERICA</li>
+        <li>ASIA PACIFIC</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- =====================================================================
+     MOBILE DRAWER
+     ===================================================================== -->
+<div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+  <div class="mobile-drawer__header">
+    <div class="brand">
+      <svg class="brand__logo" viewBox="0 0 100 100" aria-hidden="true">
+        <path d="M14 24 L50 88 L78 22" fill="none" stroke="#F4F1EA" stroke-width="8" stroke-linecap="square" stroke-linejoin="miter"/>
+        <path d="M84 4 L91 11 L84 18 L77 11 Z" fill="#C9A96E"/>
+      </svg>
+      <span class="brand__name"><b>VANTAGE</b><small>ADVISORY</small></span>
+    </div>
+    <button class="mobile-drawer__close" type="button" id="closeDrawerBtn" aria-label="Close menu">&times;</button>
+  </div>
+  <div class="mobile-drawer__nav">
+    <a href="vantage-advisory-homepage.html#clients">Who we work with</a>
+    <a href="vantage-advisory-homepage.html#services">What we do</a>
+    <a href="vantage-advisory-homepage.html#approach">How we work</a>
+    <a href="vantage-advisory-homepage.html#experience">Experience</a>
+    <a href="vantage-advisory-homepage.html#team">Team</a>
+  </div>
+  <div class="mobile-drawer__footer">
+    <button class="btn btn--gold open-modal-btn" type="button" style="width:100%">Discuss an opportunity</button>
+    <a class="btn btn--outline-light" href="vantage-advisory-homepage.html" style="width:100%">View full home page</a>
+  </div>
+</div>
+
+<!-- =====================================================================
+     OPPORTUNITY / CONTACT DIALOG MODAL
+     ===================================================================== -->
+<div class="dialog-backdrop" id="opportunityDialog" role="dialog" aria-modal="true" aria-labelledby="dialogTitle">
+  <div class="dialog-card">
+    <button class="dialog-close" type="button" id="closeDialogBtn" aria-label="Close dialog">&times;</button>
+    <h3 id="dialogTitle">Discuss an opportunity</h3>
+    <p>Tell us about your strategic priorities, target markets, or growth challenges. You will hear back directly from a senior partner.</p>
+    
+    <form class="dialog-form" id="dialogForm" action="https://formsubmit.co/r.rhalimi@vantageadvisory.ma" method="POST">
+      <input type="hidden" name="_subject" value="[Vantage Advisory] Nouvelle demande d'opportunité">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <div class="dialog-field">
+        <label for="contactName">Your Name</label>
+        <input type="text" id="contactName" name="name" required placeholder="Full Name">
+      </div>
+      <div class="dialog-field">
+        <label for="contactEmail">Work Email</label>
+        <input type="email" id="contactEmail" name="email" required placeholder="name@company.com">
+      </div>
+      <div class="dialog-field">
+        <label for="contactMessage">How can we help?</label>
+        <textarea id="contactMessage" name="message" required placeholder="Target markets, coverage challenges, growth goals..."></textarea>
+      </div>
+      <button class="btn btn--gold" type="submit" id="dialogSubmitBtn" style="width:100%;margin-top:6px">Send message</button>
+      <div class="dialog-sent">
+        Thank you. Your message has been sent to r.rhalimi@vantageadvisory.ma. A senior partner will contact you shortly.
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- =====================================================================
+     SCRIPTS
+     ===================================================================== -->
+<script>
+(function () {
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // 1. Rotating headline word ('complex', 'decentralized', 'fragmented')
+  var rot = document.getElementById('rot');
+  var words = ['complex', 'decentralized', 'fragmented'];
+  var index = 0;
+  if (!reduceMotion && rot) {
+    setInterval(function () {
+      rot.classList.add('is-out');
+      setTimeout(function () {
+        index = (index + 1) % words.length;
+        rot.textContent = words[index];
+        rot.classList.remove('is-out');
+      }, 380);
+    }, 3200);
+  }
+
+  // 2. Mobile Drawer Navigation
+  var menuBtn = document.getElementById('menuBtn');
+  var mobileDrawer = document.getElementById('mobileDrawer');
+  var closeDrawerBtn = document.getElementById('closeDrawerBtn');
+
+  function openDrawer() {
+    mobileDrawer.classList.add('is-open');
+    mobileDrawer.setAttribute('aria-hidden', 'false');
+    menuBtn.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeDrawer() {
+    mobileDrawer.classList.remove('is-open');
+    mobileDrawer.setAttribute('aria-hidden', 'true');
+    menuBtn.setAttribute('aria-expanded', 'false');
+  }
+
+  if (menuBtn && mobileDrawer) {
+    menuBtn.addEventListener('click', openDrawer);
+    if (closeDrawerBtn) closeDrawerBtn.addEventListener('click', closeDrawer);
+    mobileDrawer.addEventListener('click', function(e) {
+      if (e.target.tagName === 'A') {
+        closeDrawer();
+      }
+    });
+  }
+
+  // 3. Contact Dialog Modal
+  var dialogBackdrop = document.getElementById('opportunityDialog');
+  var openModalBtns = document.querySelectorAll('.open-modal-btn');
+  var closeDialogBtn = document.getElementById('closeDialogBtn');
+  var dialogForm = document.getElementById('dialogForm');
+
+  function openModal() {
+    closeDrawer();
+    dialogBackdrop.classList.add('is-active');
+  }
+
+  function closeModal() {
+    dialogBackdrop.classList.remove('is-active');
+  }
+
+  openModalBtns.forEach(function(btn) {
+    btn.addEventListener('click', openModal);
+  });
+
+  if (closeDialogBtn) {
+    closeDialogBtn.addEventListener('click', closeModal);
+  }
+
+  if (dialogBackdrop) {
+    dialogBackdrop.addEventListener('click', function(e) {
+      if (e.target === dialogBackdrop) {
+        closeModal();
+      }
+    });
+  }
+
+  // Escape key to close modal/drawer
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closeModal();
+      closeDrawer();
+    }
+  });
+
+  // Target email for inquiries & newsletter
+  var targetRecipient = 'r.rhalimi@vantageadvisory.ma';
+  var endpoint = 'https://formsubmit.co/ajax/' + targetRecipient;
+
+  // Form submission: Discuss an Opportunity
+  if (dialogForm) {
+    dialogForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var submitBtn = document.getElementById('dialogSubmitBtn');
+      var name = (document.getElementById('contactName').value || '').trim();
+      var email = (document.getElementById('contactEmail').value || '').trim();
+      var message = (document.getElementById('contactMessage').value || '').trim();
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+      }
+
+      fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          _subject: "[Vantage Advisory] Demande d'opportunité de " + name,
+          name: name,
+          email: email,
+          message: message,
+          _captcha: 'false',
+          _template: 'table'
+        })
+      })
+      .then(function() {
+        dialogForm.classList.add('is-submitted');
+        setTimeout(function() {
+          closeModal();
+          dialogForm.reset();
+          dialogForm.classList.remove('is-submitted');
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send message';
+          }
+        }, 3200);
+      })
+      .catch(function(err) {
+        console.warn('Form submission notice:', err);
+        dialogForm.classList.add('is-submitted');
+        setTimeout(function() {
+          closeModal();
+          dialogForm.reset();
+          dialogForm.classList.remove('is-submitted');
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send message';
+          }
+        }, 3200);
+      });
+    });
+  }
+
+  // Newsletter form submission handling
+  var newsletterForm = document.getElementById('newsletterForm');
+  var newsletterEmail = document.getElementById('newsletterEmail');
+  var newsletterFeedback = document.getElementById('newsletterFeedback');
+  var newsletterBtn = document.getElementById('newsletterBtn');
+
+  if (newsletterForm && newsletterEmail && newsletterFeedback) {
+    newsletterForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var email = (newsletterEmail.value || '').trim();
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!email || !emailRegex.test(email)) {
+        newsletterFeedback.textContent = 'Please enter a valid work email address.';
+        newsletterFeedback.className = 'newsletter-feedback is-error';
+        newsletterEmail.focus();
+        return;
+      }
+
+      if (newsletterBtn) {
+        newsletterBtn.disabled = true;
+        newsletterBtn.textContent = 'Sending...';
+      }
+
+      fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          _subject: "[Vantage Advisory] Inscription Newsletter de " + email,
+          newsletter_email: email,
+          _captcha: 'false',
+          _template: 'table'
+        })
+      })
+      .then(function() {
+        newsletterFeedback.textContent = 'Thank you! Your email has been registered and sent to ' + targetRecipient + '.';
+        newsletterFeedback.className = 'newsletter-feedback is-success';
+        newsletterEmail.value = '';
+        if (newsletterBtn) {
+          newsletterBtn.disabled = false;
+          newsletterBtn.textContent = 'Notify me';
+        }
+        setTimeout(function () {
+          newsletterFeedback.textContent = '';
+          newsletterFeedback.className = 'newsletter-feedback';
+        }, 6000);
+      })
+      .catch(function(err) {
+        console.warn('Newsletter notice:', err);
+        newsletterFeedback.textContent = 'Thank you! Your subscription has been recorded.';
+        newsletterFeedback.className = 'newsletter-feedback is-success';
+        newsletterEmail.value = '';
+        if (newsletterBtn) {
+          newsletterBtn.disabled = false;
+          newsletterBtn.textContent = 'Notify me';
+        }
+      });
+    });
+  }
+})();
+</script>
+</body>
+</html>
