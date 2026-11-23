@@ -150,37 +150,58 @@ p {
   color: var(--champagne);
 }
 
-.nav {
+.site-header-contact {
   display: flex;
   align-items: center;
-  gap: clamp(18px, 2.4vw, 34px);
-  font-size: clamp(14px, 1.7vh, 16px);
 }
 
-.nav a {
-  position: relative;
-  color: var(--on-navy);
-  padding: 6px 0;
-  transition: color .2s ease;
+.header-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--on-navy-muted);
+  font-size: clamp(12.5px, 1.5vh, 14.5px);
+  font-weight: 400;
+  letter-spacing: .02em;
+  padding: 6px 14px;
+  border: 1px solid rgba(143, 163, 184, 0.35);
+  border-radius: 999px;
+  background: rgba(22, 38, 61, 0.45);
+  transition: all .2s ease;
+  text-decoration: none;
 }
 
-.nav a::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background-color: var(--champagne);
-  transition: width .25s ease;
+.header-email svg {
+  color: var(--champagne);
+  flex-shrink: 0;
 }
 
-.nav a:hover {
+.header-email:hover {
   color: #FFFFFF;
+  border-color: var(--champagne);
+  background: rgba(212, 182, 126, 0.12);
 }
 
-.nav a:hover::after {
-  width: 100%;
+.hero-email-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--champagne);
+  font-size: clamp(12.5px, 1.4vh, 14px);
+  font-weight: 400;
+  text-decoration: none;
+  padding: 6px 10px;
+  transition: color .2s ease, opacity .2s ease;
+}
+
+.hero-email-link svg {
+  color: var(--champagne);
+  flex-shrink: 0;
+}
+
+.hero-email-link:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
 }
 
 .site-header-actions {
@@ -1170,13 +1191,15 @@ h1 .line {
       <span class="brand__name"><b>VANTAGE</b><small>ADVISORY</small></span>
     </a>
 
-    <nav class="nav" id="desktopNav" aria-label="Main">
-      <a href="vantage-advisory-homepage.html#clients">Who we work with</a>
-      <a href="vantage-advisory-homepage.html#services">What we do</a>
-      <a href="vantage-advisory-homepage.html#approach">How we work</a>
-      <a href="vantage-advisory-homepage.html#experience">Experience</a>
-      <a href="vantage-advisory-homepage.html#team">Team</a>
-    </nav>
+    <div class="site-header-contact">
+      <a class="header-email" href="mailto:r.rhalimi@vantageadvisory.ma" aria-label="Contact: r.rhalimi@vantageadvisory.ma">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+        </svg>
+        <span>r.rhalimi@vantageadvisory.ma</span>
+      </a>
+    </div>
 
     <div class="site-header-actions">
       <button class="btn btn--outline-light open-modal-btn" type="button" aria-haspopup="dialog">Discuss an opportunity</button>
@@ -1223,9 +1246,13 @@ h1 .line {
           </form>
         </div>
 
-        <!-- Action button -->
+        <!-- Action button & Direct Contact -->
         <div class="hero__cta rise" style="--d:1.05s">
           <button class="btn btn--outline-light open-modal-btn" type="button">Discuss an opportunity</button>
+          <a class="hero-email-link" href="mailto:r.rhalimi@vantageadvisory.ma">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+            <span>r.rhalimi@vantageadvisory.ma</span>
+          </a>
         </div>
       </div>
 
@@ -1295,16 +1322,15 @@ h1 .line {
     </div>
     <button class="mobile-drawer__close" type="button" id="closeDrawerBtn" aria-label="Close menu">&times;</button>
   </div>
-  <div class="mobile-drawer__nav">
-    <a href="vantage-advisory-homepage.html#clients">Who we work with</a>
-    <a href="vantage-advisory-homepage.html#services">What we do</a>
-    <a href="vantage-advisory-homepage.html#approach">How we work</a>
-    <a href="vantage-advisory-homepage.html#experience">Experience</a>
-    <a href="vantage-advisory-homepage.html#team">Team</a>
+  <div class="mobile-drawer__contact" style="padding:28px 0;display:flex;flex-direction:column;gap:14px">
+    <p style="font-size:12px;font-weight:500;letter-spacing:.2em;color:var(--champagne);text-transform:uppercase;margin:0">Direct Contact</p>
+    <a class="header-email" href="mailto:r.rhalimi@vantageadvisory.ma" style="width:fit-content">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+      <span>r.rhalimi@vantageadvisory.ma</span>
+    </a>
   </div>
   <div class="mobile-drawer__footer">
     <button class="btn btn--gold open-modal-btn" type="button" style="width:100%">Discuss an opportunity</button>
-    <a class="btn btn--outline-light" href="vantage-advisory-homepage.html" style="width:100%">View full home page</a>
   </div>
 </div>
 
